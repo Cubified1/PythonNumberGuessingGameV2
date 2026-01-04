@@ -2,6 +2,11 @@ import random
 import time
 
 
+print("welcome to python number guessing game")
+
+input("Press hit enter to continue")
+
+
 def number_guessing():
     RandomNum = random.randint(1, 100)
     lowest_number = 1
