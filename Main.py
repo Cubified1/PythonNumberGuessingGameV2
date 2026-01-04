@@ -37,7 +37,6 @@ def number_guessing():
                 is_running = False
         else:
             print("Invalid input")
-number_guessing()
 
 
 def continue_again():
@@ -61,5 +60,5 @@ def continue_again():
 
 
 
-
+number_guessing()
 continue_again()
