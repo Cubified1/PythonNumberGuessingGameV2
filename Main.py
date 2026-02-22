@@ -4,7 +4,7 @@ import time
 
 print("welcome to python number guessing game")
 
-input("Press hit enter to continue")
+input("Hit enter to continue")
 
 def number_guessing():
     user_level = input("Please enter your level Easy, Medium or Hard: ").lower()
