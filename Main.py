@@ -1,13 +1,17 @@
 import random
 import time
 
-
 print("welcome to python number guessing game")
 
-input("Press hit enter to continue")
+input("Hit enter to continue")
+
 
 def number_guessing():
     user_level = input("Please enter your level Easy, Medium or Hard: ").lower()
+
+    while user_level != "easy" and user_level != "medium" and user_level != "hard":
+        user_level = input("Please enter your level: Easy, Medium or Hard: ").lower()
+
     if user_level == "easy":
         lowest_number = 1
         highest_number = 50
@@ -23,8 +27,6 @@ def number_guessing():
     is_running = True
 
     RandomNum = random.randint(lowest_number, highest_number)
-
-
 
     while is_running:
 
@@ -57,27 +59,24 @@ def number_guessing():
 
 def continue_again():
     close_counter = 0
+    while True:
+        again = input("Do you want to continue (y/n)? ").lower()
 
 
-    again = input("Do you want to continue (y/n)? ")
-    while again == "y":
-        number_guessing()
-        continue_again()
-
-    if again == "n":
-        print("Goodbye!")
-        for close_counter in reversed(range(0, 4)):
+        if again == "n" or again == "no":
+            print("Goodbye!")
+            for close_counter in reversed(range(0, 4)):
+                time.sleep(1)
+                print(f"closing in {close_counter}")
             time.sleep(1)
-            print(f"closing in {close_counter}")
+            break
 
-    else:
-        print("Please enter y or n")
-        continue_again()
-
+        elif again == "y" or again == "yes":
+            number_guessing()
 
 
-
-
+        else:
+            print("Please enter y or n")
 
 
 number_guessing()
