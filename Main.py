@@ -5,9 +5,12 @@ print("welcome to python number guessing game")
 
 input("Hit enter to continue")
 
-
 def number_guessing():
     user_level = input("Please enter your level Easy, Medium or Hard: ").lower()
+
+    while user_level != "easy" and user_level != "medium" and user_level != "hard":
+        user_level = input("Please enter your level: Easy, Medium or Hard: ").lower()
+
 
     while user_level != "easy" and user_level != "medium" and user_level != "hard":
         user_level = input("Please enter your level: Easy, Medium or Hard: ").lower()
